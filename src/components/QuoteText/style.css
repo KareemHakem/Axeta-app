@@ -1,0 +1,43 @@
+.card-quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 300px;
+  width: 200px;
+  margin-left: 100px;
+}
+
+.quote-container-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.quote-image-start {
+  height: 50px;
+  width: 60px;
+  object-fit: contain;
+  margin-right: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.quote-image-end {
+  height: 50px;
+  width: 60px;
+  object-fit: contain;
+  margin-left: 100px;
+  -o-transform: scaleX(-1);
+  -o-transform: scaleY(-1);
+  transform: scaleY(-1) !important;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.card-quote p {
+  width: 200px;
+}

@@ -8,12 +8,24 @@
   position: absolute;
 }
 
+.btn-replace-image {
+  outline: none !important;
+  border: none !important;
+  background-color: #333333 !important;
+  color: #fff !important;
+  height: 20px !important;
+  width: 200px !important;
+  margin-bottom: 20px;
+  margin-left: 100px !important;
+}
+
 .navbar-image-container img {
   height: 130px;
   width: 130px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 20px;
+  border: 2px solid #fff;
 }
 
 .navbar-info-user-container {
@@ -31,9 +43,17 @@
   align-items: flex-start;
 }
 
-.navbar-chip {
-  height: 25px;
+.ship-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  margin-left: 30px;
+}
+
+.ship-experience {
+  height: 25px;
+  width: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,24 +61,23 @@
   color: #f0f1f2;
   border-radius: 3px;
   margin-top: 10px;
+  margin-left: 40px;
 }
 
-.navbar-experience {
-  font-size: 15px;
-}
-
-.button-add-chip {
-  margin-left: 15px;
-  width: 25px;
-  height: 25px;
+.create-input-button {
   outline: none;
-  color: #f0f1f2;
+  border: none;
   background-color: #333333;
-  border-radius: 3px;
+  color: #ffff;
+  width: 20px;
+  height: 25px;
+  border-radius: 2px;
+  margin-right: -150px;
   margin-top: 10px;
+  z-index: 1000;
 }
 
-.btn-container {
+.print-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,4 +122,10 @@
   z-index: 1000 !important;
   background-color: transparent;
   margin-top: -100px;
+}
+.flex-wrap img {
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+  margin-right: 5px;
 }

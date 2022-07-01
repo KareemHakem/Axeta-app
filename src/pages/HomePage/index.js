@@ -1,42 +1,39 @@
-import React, { useState } from "react";
+import React from "react";
+
+import Availabilitys from "../../components/Availability";
+import Experience from "../../components/Experience";
+import Portfolio from "../../components/Portfolio";
+import QuoteText from "../../components/QuoteText";
+import SampleCode from "../../components/SampleCode";
 
 import Navbar from "../Navbar";
 
 export default function HomePage({ handlePrint }) {
-  const [nameValue, setNameValue] = useState();
-  const [locationValue, setLocationValue] = useState();
-  const [languageValue, setLanguageValue] = useState();
-
-  const handleSaveValue = (e) => {
-    setNameValue(e.target.value);
-    console.log(e.target.value);
-  };
-
-  const handleSaveLocationValue = (e) => {
-    setLocationValue(e.target.value);
-    console.log(e.target.value);
-  };
-
-  const handleSaveLanguageValue = (e) => {
-    setLanguageValue(e.target.value);
-    console.log(e.target.value);
-  };
-
   return (
-    <>
-      <Navbar
-        handlePrint={handlePrint}
-        handleSaveValue={handleSaveValue}
-        nameValue={nameValue}
-        locationValue={locationValue}
-        languageValue={languageValue}
-        handleSaveLocationValue={handleSaveLocationValue}
-        handleSaveLanguageValue={handleSaveLanguageValue}
-        // handleChangeImage={handleChangeImage}
-        // handleClickImage={handleClickImage}
-        // file={file}
-        // openButton={openButton}
-      />
-    </>
+    <div className="flex-direction">
+      <Navbar handlePrint={handlePrint} />
+      <div
+        className="flex-direction"
+        style={{ marginTop: 200, marginLeft: 100 }}
+      >
+        <div className="flex-wrap">
+          <Portfolio />
+          <Experience />
+          <SampleCode />
+          <Availabilitys />
+        </div>
+
+        <div className="flex-wrap">
+          <QuoteText
+            text="The only true wisdom is in knowing you know nothing..."
+            header="The Most Amaizing..."
+          />
+          <QuoteText
+            text="There is only one good, knowledge, and one evil, ignorance."
+            header="In clients I look for..."
+          />
+        </div>
+      </div>
+    </div>
   );
 }
