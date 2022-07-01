@@ -1,8 +1,10 @@
-import React from 'react'
-import "./style.css"
+import React from "react";
+import "./style.css";
 
 export default function SampleCode() {
   return (
-    <div>SampleCode</div>
-  )
+    <div className="SampleCode-container">
+      <h3>SampleCode</h3>
+    </div>
+  );
 }

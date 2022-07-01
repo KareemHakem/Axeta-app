@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./style.css";
+
 
 export default function SwitchInput({ fontSize, fontWeight }) {
   //   handleSwitchInput,
@@ -27,10 +29,10 @@ export default function SwitchInput({ fontSize, fontWeight }) {
         <div style={{ fontSize, fontWeight }}>{inputValue}</div>
       ) : (
         <input
+          className="input-info-form"
           onChange={handleChangeValue}
           value={inputValue}
           onKeyDown={handleKeyPress}
-          
         />
       )}
     </div>

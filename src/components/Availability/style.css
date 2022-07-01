@@ -3,10 +3,20 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  margin-left: 400px;
-  margin-top: 80px;
+  margin-top: 40px;
+  width: 250px !important;
+  margin-left: 100px;
 }
 
 .Availabilitys-container h3 {
-  margin-bottom: 10px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+
+.Availabilitys-container p {
+  margin-top: 10px;
 }

@@ -4,8 +4,27 @@
   align-items: center;
   flex-direction: column;
   height: 300px;
-  width: 200px;
-  margin-left: 100px;
+  width: 250px;
+  margin-top: -130px;
+  margin-left: 30px;
+}
+
+.card-quote h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.card-quote p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  
 }
 
 .quote-container-text {

@@ -1,0 +1,16 @@
+.SampleCode-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 40px;
+  margin-left: 150px;
+}
+
+.SampleCode-container h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}

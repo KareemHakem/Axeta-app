@@ -1,0 +1,20 @@
+.Experience-container {
+  margin-top: 40px;
+  margin-left: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100px;
+  margin-left: 150px;
+}
+
+
+
+.Experience-container  h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
