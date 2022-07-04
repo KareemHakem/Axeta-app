@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 import NavbarSlider from "../../components/NavbarSlider";
+import girl from "../../assets/girl.jpg";
 
 export default function Navbar({ handlePrint }) {
   const [openButton, setOpenButton] = useState(false);
-  const [file, setFile] = useState();
+  const [file, setFile] = useState(girl);
+  const [inputSwitch, setInputSwitch] = useState(false);
+  const [inputValue, setInputValue] = useState("kareem");
+  const [experienceValue, setExperienceValue] = useState("");
+
+  const handleChangeValue = (e) => {
+    setInputValue(e.target.value);
+  };
+  const handleSwitchInput = () => {
+    setInputSwitch(true);
+  };
 
   const handleClickImage = () => {
     setOpenButton(!openButton);
@@ -14,6 +25,22 @@ export default function Navbar({ handlePrint }) {
     setFile(URL.createObjectURL(e.target.files[0]));
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      setInputSwitch(false);
+    }
+  };
+
+  const handleKeyPressExpe = (e) => {
+    if (e.key === "Enter") {
+      setInputSwitch(false);
+      experienceValue("");
+    }
+  };
+
+  const handleChangeUserExpeValue = (e) => {
+    setExperienceValue(e.target.value);
+  };
   return (
     <>
       <NavbarSlider
@@ -22,15 +49,16 @@ export default function Navbar({ handlePrint }) {
         handleClickImage={handleClickImage}
         file={file}
         openButton={openButton}
-        // handleCreateShip={handleCreateShip}
-        // handleChangeValue={handleChangeValue}
-        // handleSwitchInput={handleSwitchInput}
-        // value={inputValue}
-        // inputSwitch={inputSwitch}
-        // handleKeyPress={handleKeyPress}
-        // handleChangeValue={handleChangeValue}
-        // inputValue={inputShipValue}
-        //handleKeyPress={handleKeyPress}
+        handleSwitchInput={handleSwitchInput}
+        handleChangeValue={handleChangeValue}
+        inputSwitch={inputSwitch}
+        handleKeyPress={handleKeyPress}
+        inputValue={inputValue}
+        handleChangeUserExpeValue={handleChangeUserExpeValue}
+        inputExpeUserValue={experienceValue}
+        handleKeyExpePress={handleKeyPressExpe}
+        handleSwitchBtnExpeInput={handleSwitchInput}
+        handleCreateInputExpe={handleSwitchInput}
       />
     </>
   );

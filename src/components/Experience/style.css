@@ -1,20 +1,72 @@
 .Experience-container {
   margin-top: 40px;
-  margin-left: 60px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100px;
-  margin-left: 150px;
+  flex-direction: column;
+  width: 200px;
+  height: 250px;
+  margin-left: 50px;
 }
 
+.input {
+  width: 100px;
+  border: none;
+  outline: none;
+  margin-left: 5px;
+}
 
-
-.Experience-container  h3 {
+.Experience-container h3 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 27px;
   line-height: 24px;
   margin-bottom: 10px;
+}
+
+.expe-text {
+  display: flex;
+}
+
+.flex-input-Experience {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1091px) {
+  .Experience-container {
+    margin-left: 40px;
+    width: 190px;
+  }
+  .Experience-container h3 {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 877px) {
+  .Experience-container {
+    display: flex;
+    justify-content: center !important;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 90px;
+    width: 100% !important;
+    margin-left: 170px;
+    border: 1px solid #0000 !important;
+  }
+  .Experience-container h3 {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+  .expe-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+  }
 }

@@ -1,0 +1,33 @@
+.input-info-name-form {
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.06);
+  width: 360px;
+  height: 48px;
+  font-size: 40px;
+  border-bottom: 1px solid #333333;
+}
+
+.switch-input-value {
+  width: 360px;
+  height: 48px;
+}
+
+.switch-input-value:hover {
+  width: 360px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+@media screen and (max-width: 745px) {
+  .switch-input-value {
+    width: 160px;
+    height: 40px;
+  }
+
+  .switch-input-value:hover {
+    width: 160px;
+    height: 40px;
+   
+  }
+}

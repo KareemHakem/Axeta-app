@@ -1,0 +1,22 @@
+.input-value-expe {
+  margin-left: 10px;
+  color: #3483cc;
+  border-bottom: 1px dashed #3483cc;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.input-value-expe:hover {
+  color: #eb5757;
+}
+
+.input-expe-form {
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.06);
+  font-size: 14px;
+  border-bottom: 1px solid #333333;
+  width: 100px;
+  height: 20px;
+  margin-left: 10px;
+}

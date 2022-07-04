@@ -2,8 +2,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-direction: column;
   margin-top: 40px;
-  margin-left: 150px;
+  margin-right: -70px;
+  height: 250px;
 }
 
 .SampleCode-container h3 {
@@ -13,4 +15,32 @@
   font-size: 27px;
   line-height: 24px;
   margin-bottom: 10px;
+}
+
+.code-card {
+  width: 364px !important;
+  height: 144px !important;
+
+  background: #b3bac0 !important;
+  opacity: 0.2 !important;
+  border-radius: 8px !important;
+}
+
+@media screen and (max-width: 877px) {
+  .SampleCode-container {
+    justify-content: center;
+    width: 100% !important;
+    margin-left: 90px;
+    height: 210px;
+    margin-top: 100px !important;
+  }
+
+  .SampleCode-container h3 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
 }

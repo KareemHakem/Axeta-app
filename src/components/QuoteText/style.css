@@ -3,10 +3,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 300px;
-  width: 250px;
-  margin-top: -130px;
-  margin-left: 30px;
+  height: 200px;
+  width: 330px;
+  margin-top: -40px;
 }
 
 .card-quote h2 {
@@ -24,7 +23,6 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  
 }
 
 .quote-container-text {
@@ -48,7 +46,7 @@
   height: 50px;
   width: 60px;
   object-fit: contain;
-  margin-left: 100px;
+  margin-left: 140px;
   -o-transform: scaleX(-1);
   -o-transform: scaleY(-1);
   transform: scaleY(-1) !important;
@@ -59,4 +57,29 @@
 
 .card-quote p {
   width: 200px;
+}
+
+@media screen and (max-width: 877px) {
+  .card-quote {
+    justify-content: center;
+    width: 100% !important;
+    height: 210px;
+    margin-top: 50px;
+    margin-right: 50px;
+  }
+
+  .card-quote h2 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .card-quote p {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 25px;
+  }
 }

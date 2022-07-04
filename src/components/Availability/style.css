@@ -3,9 +3,10 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  margin-top: 40px;
-  width: 250px !important;
-  margin-left: 100px;
+  margin-top: 10px;
+  width: 230px !important;
+  height: 250px;
+  margin-left: 130px;
 }
 
 .Availabilitys-container h3 {
@@ -14,9 +15,34 @@
   font-weight: 500;
   font-size: 25px;
   line-height: 24px;
-  margin-bottom: 5px;
+  margin-top: 15px;
 }
 
 .Availabilitys-container p {
   margin-top: 10px;
+}
+
+@media screen and (max-width: 877px) {
+  .Availabilitys-container {
+    justify-content: center;
+    width: 100% !important;
+    margin-left: 150px !important;
+    height: 210px;
+    margin-top: 60px;
+  }
+
+  .Availabilitys-container h3 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .Availabilitys-container p {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 25px;
+  }
 }

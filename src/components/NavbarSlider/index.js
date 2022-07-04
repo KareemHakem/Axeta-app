@@ -1,87 +1,68 @@
-import React, { useState } from "react";
+import React from "react";
+
+import SwitchInputName from "../SwitchInputName";
 import SwitchInput from "../SwitchInput";
+import CreateChips from "../CreateChips";
 
 import Printer from "../../assets/printer.png";
 import Flag from "../../assets/flag.png";
+import replace from "../../assets/replace.png";
+
 import "react-edit-text/dist/index.css";
 import "./style.css";
+import UploadPhoto from "../UploadPhoto";
 
 export default function NavbarSlider({
   handlePrint,
   handleChangeImage,
   handleClickImage,
   openButton,
-  //   handleCreateShip,
-  //   createInput,
+  handleChangeUserExpeValue,
+  inputExpeUserValue,
+  handleKeyExpePress,
+  handleSwitchBtnExpeInput,
+  inputSwitch,
   file,
-
-  //   handleChangeValue,
-  //   inputValue,
-  //   handleKeyPress,
+  handleCreateInputExpe,
 }) {
-  const [createInput, setCreateInput] = useState(false);
-  const [inputShipValue, setInputShipValue] = useState("");
-
-  const handleCreateShip = () => {
-    setCreateInput(!createInput);
-  };
-
-  const handleChangeValue = (e) => {
-    setInputShipValue(e.target.value);
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      setCreateInput(false);
-    }
-  };
   return (
     <div className="navbar-slider-container">
-      {!openButton ? (
-        <input
-          type="file"
-          onChange={handleChangeImage}
-          className="btn-replace-image"
-        />
-      ) : (
-        <></>
-      )}
-
-      <div className="navbar-image-container">
-        <img onClick={handleClickImage} src={file} alt="imageUser" />
-      </div>
-
-      <div className="navbar-info-user-container">
-        <SwitchInput fontSize={30} fontWeight={500} />
-        <SwitchInput fontSize={14} fontWeight={100} />
-        <div className="flex-wrap">
-          <img src={Flag} alt="flag-img" />
-          <SwitchInput
-            style={{ marginLeft: -10 }}
-            fontSize={15}
-            fontWeight={100}
-          />
-        </div>
-        <div className="ship-container">
-          {!createInput ? (
-            <>
-              <button
-                className="create-input-button"
-                onClick={handleCreateShip}
-              >
-                +
-              </button>
-              <p className="ship-experience">{inputShipValue}</p>
-            </>
+      <div className="left-side-container">
+        <div className="navbar-image-container">
+          {/* {!openButton ? (
+            <></>
           ) : (
             <input
-              className="input-form-pro"
-              onChange={handleChangeValue}
-              onKeyDown={handleKeyPress}
+              type="file"
+              onChange={handleChangeImage}
+              className="btn-replace-image"
             />
           )}
+          <img onClick={handleClickImage} src={file} alt="imageUser" /> */}
+          <UploadPhoto />
+        </div>
+        <div className="navbar-info-user-container">
+          <SwitchInputName fontSize={40} fontWeight={500} />
+          <SwitchInput fontSize={20} fontWeight={100} />
+          <div className="flex-wrap">
+            <img src={Flag} alt="flag-img" />
+            <SwitchInput
+              style={{ marginLeft: -10 }}
+              fontSize={20}
+              fontWeight={100}
+            />
+          </div>
+          <CreateChips
+            handleChangeUserExpeValue={handleChangeUserExpeValue}
+            inputExpeUserValue={inputExpeUserValue}
+            handleKeyExpePress={handleKeyExpePress}
+            handleSwitchBtnExpeInput={handleSwitchBtnExpeInput}
+            handleCreateInputExpe={handleCreateInputExpe}
+            inputSwitch={inputSwitch}
+          />
         </div>
       </div>
+
       <div className="print-container">
         <img src={Printer} alt="printer-img" className="printer-image" />
         <button className="print-btn" type="button" onClick={handlePrint}>

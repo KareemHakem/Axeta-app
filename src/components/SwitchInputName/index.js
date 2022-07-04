@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 
-export default function SwitchInput({ fontSize, fontWeight }) {
+export default function SwitchInputName({ fontSize, fontWeight }) {
   const [inputSwitch, setInputSwitch] = useState(false);
   const [inputValue, setInputValue] = useState("kareem");
 
@@ -20,10 +20,12 @@ export default function SwitchInput({ fontSize, fontWeight }) {
   return (
     <div onClick={handleSwitchInput}>
       {!inputSwitch ? (
-        <div  style={{ fontSize, fontWeight }}>{inputValue}</div>
+        <div className="switch-input-value" style={{ fontSize, fontWeight }}>
+          {inputValue}
+        </div>
       ) : (
         <input
-          className="input-info-form"
+          className="input-info-name-form"
           onChange={handleChangeValue}
           value={inputValue}
           onKeyDown={handleKeyPress}

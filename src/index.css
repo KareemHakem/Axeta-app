@@ -26,9 +26,19 @@ code {
 
 .flex-wrap {
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 877px) {
+  .flex-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 
 .input-form-pro {

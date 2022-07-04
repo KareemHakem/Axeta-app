@@ -1,0 +1,29 @@
+/* .image_container {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 50%;
+} */
+
+.upload_btn {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+}
+
+.image-replace-logo {
+  height: 30px !important;
+  width: 30px !important;
+  border-radius: 50% !important;
+}
+
+.header_image {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 4px solid #fff;
+}

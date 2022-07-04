@@ -3,16 +3,13 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-
   margin-top: 50px;
-  height: 300px;
-  width: 250px;
-  
+  height: 250px;
+  width: 240px;
 }
 
 .Portfolio-container h3 {
   font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   font-size: 27px;
   line-height: 24px;
@@ -21,13 +18,53 @@
 
 .Portfolio-container p {
   font-family: "Roboto";
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #3483cc;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .Portfolio-container p:hover {
   color: #eb5757;
+}
+
+@media screen and (max-width: 1091px) {
+  .Portfolio-container {
+    width: 190px;
+  }
+  .Portfolio-container h3 {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 877px) {
+  .Portfolio-container {
+    display: flex;
+    justify-content: center !important;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 250px;
+    width: 100% !important;
+    margin-left: 170px;
+    border: 1px solid #0000 !important;
+  }
+  .Portfolio-container h3 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+  .Portfolio-container p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+  }
 }

@@ -12,27 +12,24 @@ export default function HomePage({ handlePrint }) {
   return (
     <div className="flex-direction">
       <Navbar handlePrint={handlePrint} />
-      <div
-        className="flex-direction"
-        style={{ marginTop: 200, marginLeft: 100 }}
-      >
-        <div className="flex-wrap">
-          <Portfolio />
-          <Experience />
-          <SampleCode />
-          <Availabilitys />
-        </div>
+      <div className="flex-wrap" style={{ marginTop: 200, marginLeft: 100 }}>
+        <Portfolio />
+        <Experience />
+        <SampleCode />
+        <Availabilitys />
 
-        <div className="flex-wrap">
-          <QuoteText
-            text="The only true wisdom is in knowing you know nothing..."
-            header="The Most Amaizing..."
-          />
-          <QuoteText
-            text="There is only one good, knowledge, and one evil, ignorance."
-            header="In clients I look for..."
-          />
-        </div>
+        <QuoteText
+          text="The only true wisdom is in knowing you know nothing..."
+          header="The Most Amaizing..."
+        />
+        <QuoteText
+          text="There is only one good, knowledge, and one evil, ignorance."
+          header="In clients I look for..."
+        />
+        <QuoteText
+          text="There is only one good, knowledge, and one evil, ignorance."
+          header="In clients I look for..."
+        />
       </div>
     </div>
   );
