@@ -2,33 +2,57 @@ import React from "react";
 import "./style.css";
 
 export default function CreateChops({
-  inputSwitch, 
-  handleChangeUserExpeValue,
-  inputExpeUserValue,
-  handleKeyExpePress,
-  handleSwitchBtnExpeInput,
-  handleCreateInputExpe,
+  handleOpenDeleteButton,
+  users,
+  userData,
+  openInput,
+  handleSubmit,
+  handleExperience,
+  openButton,
+  handleDelate,
+  handleOpenInput,
+  expe,
 }) {
   return (
     <div className="user-expe-container">
-      <div className="chip-user-expe">{inputExpeUserValue}</div>
-      <div onClick={handleSwitchBtnExpeInput}>
-        {!inputSwitch ? (
-          <button onClick={handleCreateInputExpe} className="btn-create-chip">
-            +
-          </button>
-        ) : (
-          <>
-            <input
-              type="text"
-              value={inputExpeUserValue}
-              onChange={(e) => handleChangeUserExpeValue(e)}
-              className="input-expe-user"
-              onKeyDown={handleKeyExpePress}
-            />
-          </>
-        )}
+      <div onClick={handleOpenDeleteButton} className="chip-container">
+        {userData.map((user) => (
+          <div>
+            <div className="chip-user-expe">
+              <h3>{user.expe}</h3>
+              {!openButton ? (
+                <></>
+              ) : (
+                <button
+                  className="btn-create-chip-delete"
+                  onClick={() => handleDelate(user.id)}
+                >
+                  X
+                </button>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
+
+      {!openInput ? (
+        <></>
+      ) : (
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <div>
+            <input
+              onChange={(e) => handleExperience(e)}
+              type="text"
+              value={expe}
+              placeholder="Expe.."
+              className="input-expe-user"
+            />
+          </div>
+        </form>
+      )}
+      <button className="btn-create-chip" onClick={handleOpenInput}>
+        +
+      </button>
     </div>
   );
 }

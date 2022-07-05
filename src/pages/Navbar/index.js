@@ -2,12 +2,41 @@ import React, { useState } from "react";
 import NavbarSlider from "../../components/NavbarSlider";
 import girl from "../../assets/girl.jpg";
 
-export default function Navbar({ handlePrint }) {
-  const [openButton, setOpenButton] = useState(false);
+export default function Navbar({ handlePrint, setUserData, userData }) {
   const [file, setFile] = useState(girl);
   const [inputSwitch, setInputSwitch] = useState(false);
   const [inputValue, setInputValue] = useState("kareem");
-  const [experienceValue, setExperienceValue] = useState("");
+
+  const [expe, setExse] = useState("");
+
+  const [openInput, setOpenInput] = useState(false);
+  const [openButton, setOpenButton] = useState(false);
+
+  const handleExperience = (e) => {
+    setExse(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const value = {
+      expe,
+    };
+
+    setUserData([...userData, value]);
+    setExse("");
+  };
+
+  const handleDelate = (id) => {
+    setUserData(userData.filter((user) => user.id !== id));
+  };
+
+  const handleOpenInput = () => {
+    setOpenInput(!openInput);
+  };
+
+  const handleOpenDeleteButton = () => {
+    setOpenButton(!openButton);
+  };
 
   const handleChangeValue = (e) => {
     setInputValue(e.target.value);
@@ -31,16 +60,6 @@ export default function Navbar({ handlePrint }) {
     }
   };
 
-  const handleKeyPressExpe = (e) => {
-    if (e.key === "Enter") {
-      setInputSwitch(false);
-      experienceValue("");
-    }
-  };
-
-  const handleChangeUserExpeValue = (e) => {
-    setExperienceValue(e.target.value);
-  };
   return (
     <>
       <NavbarSlider
@@ -54,11 +73,16 @@ export default function Navbar({ handlePrint }) {
         inputSwitch={inputSwitch}
         handleKeyPress={handleKeyPress}
         inputValue={inputValue}
-        handleChangeUserExpeValue={handleChangeUserExpeValue}
-        inputExpeUserValue={experienceValue}
-        handleKeyExpePress={handleKeyPressExpe}
         handleSwitchBtnExpeInput={handleSwitchInput}
         handleCreateInputExpe={handleSwitchInput}
+        userData={userData}
+        openInput={openInput}
+        handleOpenDeleteButton={handleOpenDeleteButton}
+        handleDelate={handleDelate}
+        handleOpenInput={handleOpenInput}
+        handleSubmit={handleSubmit}
+        handleExperience={handleExperience}
+        expe={expe}
       />
     </>
   );

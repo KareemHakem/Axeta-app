@@ -2,6 +2,31 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 15px;
+}
+
+.chip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-create-chip-delete {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #eb5757;
+  color: #ffff;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 25px !important;
+  margin-right: -10px;
+  z-index: 10000 !important;
+  cursor: pointer;
 }
 
 .chip-user-expe {
@@ -13,6 +38,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   margin-right: 5px;
 }
 
@@ -34,4 +60,5 @@
   background: #333333;
   border-radius: 4px;
   margin-left: 5px;
+  cursor: pointer;
 }

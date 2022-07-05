@@ -6,7 +6,6 @@ import CreateChips from "../CreateChips";
 
 import Printer from "../../assets/printer.png";
 import Flag from "../../assets/flag.png";
-import replace from "../../assets/replace.png";
 
 import "react-edit-text/dist/index.css";
 import "./style.css";
@@ -14,31 +13,21 @@ import UploadPhoto from "../UploadPhoto";
 
 export default function NavbarSlider({
   handlePrint,
-  handleChangeImage,
-  handleClickImage,
+  users,
+  userData,
+  openInput,
+  handleOpenDeleteButton,
+  handleDelate,
+  handleOpenInput,
+  handleSubmit,
+  handleExperience,
   openButton,
-  handleChangeUserExpeValue,
-  inputExpeUserValue,
-  handleKeyExpePress,
-  handleSwitchBtnExpeInput,
-  inputSwitch,
-  file,
-  handleCreateInputExpe,
+  expe,
 }) {
   return (
     <div className="navbar-slider-container">
       <div className="left-side-container">
         <div className="navbar-image-container">
-          {/* {!openButton ? (
-            <></>
-          ) : (
-            <input
-              type="file"
-              onChange={handleChangeImage}
-              className="btn-replace-image"
-            />
-          )}
-          <img onClick={handleClickImage} src={file} alt="imageUser" /> */}
           <UploadPhoto />
         </div>
         <div className="navbar-info-user-container">
@@ -53,21 +42,25 @@ export default function NavbarSlider({
             />
           </div>
           <CreateChips
-            handleChangeUserExpeValue={handleChangeUserExpeValue}
-            inputExpeUserValue={inputExpeUserValue}
-            handleKeyExpePress={handleKeyExpePress}
-            handleSwitchBtnExpeInput={handleSwitchBtnExpeInput}
-            handleCreateInputExpe={handleCreateInputExpe}
-            inputSwitch={inputSwitch}
+            users={users}
+            userData={userData}
+            openInput={openInput}
+            handleOpenDeleteButton={handleOpenDeleteButton}
+            handleDelate={handleDelate}
+            handleOpenInput={handleOpenInput}
+            handleSubmit={handleSubmit}
+            handleExperience={handleExperience}
+            openButton={openButton}
+            expe={expe}
           />
         </div>
-      </div>
 
-      <div className="print-container">
-        <img src={Printer} alt="printer-img" className="printer-image" />
-        <button className="print-btn" type="button" onClick={handlePrint}>
-          Print this page
-        </button>
+        <div className="print-container">
+          <img src={Printer} alt="printer-img" className="printer-image" />
+          <button className="print-btn" type="button" onClick={handlePrint}>
+            Print this page
+          </button>
+        </div>
       </div>
     </div>
   );

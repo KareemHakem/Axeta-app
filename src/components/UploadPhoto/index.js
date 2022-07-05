@@ -7,6 +7,7 @@ import "./style.css";
 function UploadPhoto() {
   const [image, setImage] = useState();
   const [preview, setPreview] = useState();
+  const [openButton, setOpenButton] = useState(false);
   const fileInputRef = useRef(null);
 
   useEffect(() => {
@@ -20,6 +21,11 @@ function UploadPhoto() {
       setPreview(null);
     }
   }, [image]);
+
+  const handleOpenButtonReplace = () => {
+    setOpenButton(!openButton);
+    console.log("kareem");
+  };
 
   return (
     <div>
@@ -44,9 +50,7 @@ function UploadPhoto() {
               alt="profile"
               className="header_image"
               style={{ objectFit: "cover" }}
-              onClick={() => {
-                setImage(null);
-              }}
+              onClick={handleOpenButtonReplace}
             />
           </div>
         ) : (
@@ -58,34 +62,42 @@ function UploadPhoto() {
                 fileInputRef.current.click();
               }}
             >
-              <img
-                src={replace}
-                alt="image_replace"
-                className="image-replace-logo"
-              />
+              {!openButton ? (
+                <></>
+              ) : (
+                <img
+                  src={replace}
+                  alt="image_replace"
+                  className="image-replace-logo"
+                />
+              )}
             </button>
             <img
               className="header_image"
               src="https://content.fortune.com/wp-content/uploads/2015/05/rtx1b282.jpg"
               alt="profile"
+              onClick={handleOpenButtonReplace}
             />
           </div>
         )}
-
-        <input
-          type="file"
-          style={{ display: "none" }}
-          ref={fileInputRef}
-          accept="image/*"
-          onChange={(event) => {
-            const file = event.target.files[0];
-            if (file) {
-              setImage(file);
-            } else {
-              setImage(null);
-            }
-          }}
-        />
+        {!openButton ? (
+          <></>
+        ) : (
+          <input
+            type="file"
+            style={{ display: "none" }}
+            ref={fileInputRef}
+            accept="image/*"
+            onChange={(event) => {
+              const file = event.target.files[0];
+              if (file) {
+                setImage(file);
+              } else {
+                setImage(null);
+              }
+            }}
+          />
+        )}
       </form>
     </div>
   );

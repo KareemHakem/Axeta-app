@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Availabilitys from "../../components/Availability";
 import Experience from "../../components/Experience";
@@ -9,12 +9,18 @@ import SampleCode from "../../components/SampleCode";
 import Navbar from "../Navbar";
 
 export default function HomePage({ handlePrint }) {
+  const [userData, setUserData] = useState(users);
+
   return (
     <div className="flex-direction">
-      <Navbar handlePrint={handlePrint} />
+      <Navbar
+        userData={userData}
+        setUserData={setUserData}
+        handlePrint={handlePrint}
+      />
       <div className="flex-wrap" style={{ marginTop: 200, marginLeft: 100 }}>
         <Portfolio />
-        <Experience />
+        <Experience userData={userData} />
         <SampleCode />
         <Availabilitys />
 
@@ -34,3 +40,10 @@ export default function HomePage({ handlePrint }) {
     </div>
   );
 }
+
+const users = [
+  {
+    id: 1,
+    expe: "javascript",
+  },
+];
