@@ -5,17 +5,17 @@
   font-size: 20px;
   border-bottom: 1px solid #333333;
   width: 200px;
-  height: 30px;
+  height: 25px;
   margin-top: 10px;
 }
 
 .switch-input-value-city {
   margin-top: 10px;
   width: 160px;
-  height: 30px;
+  height: 25px;
 }
 .switch-input-value-city:hover {
   width: 160px;
-  height: 30px;
+  height: 25px;
   background: rgba(0, 0, 0, 0.06);
 }

@@ -44,6 +44,6 @@ export default function HomePage({ handlePrint }) {
 const users = [
   {
     id: 1,
-    expe: "javascript",
+    expe: "Java Script",
   },
 ];

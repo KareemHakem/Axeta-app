@@ -5,18 +5,18 @@
   font-size: 20px;
   border-bottom: 1px solid #333333;
   width: 200px;
-  height: 30px;
+  height: 25px;
   margin-top: 10px;
 }
 
 .switch-input-value {
   margin-top: 5px;
   width: 160px;
-  height: 30px;
+  height: 25px;
   font-size:16px ;
 }
 .switch-input-value:hover {
   width: 160px;
-  height: 30px;
+  height: 25px;
   background: rgba(0, 0, 0, 0.06);
 }

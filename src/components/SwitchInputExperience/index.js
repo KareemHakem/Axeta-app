@@ -3,7 +3,7 @@ import "./style.css";
 
 export default function SwitchInputExperience(fontSize, fontWeight) {
   const [inputSwitch, setInputSwitch] = useState(false);
-  const [inputValue, setInputValue] = useState("kareem");
+  const [inputValue, setInputValue] = useState("4 years");
 
   const handleChangeValue = (e) => {
     setInputValue(e.target.value);
