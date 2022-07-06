@@ -3,7 +3,7 @@ import "./style.css";
 
 export default function SwitchInput({ fontSize, fontWeight }) {
   const [inputSwitch, setInputSwitch] = useState(false);
-  const [inputValue, setInputValue] = useState("kareem");
+  const [inputValue, setInputValue] = useState("Canada, ");
 
   const handleChangeValue = (e) => {
     setInputValue(e.target.value);
@@ -20,7 +20,9 @@ export default function SwitchInput({ fontSize, fontWeight }) {
   return (
     <div onClick={handleSwitchInput}>
       {!inputSwitch ? (
-        <div  style={{ fontSize, fontWeight }}>{inputValue}</div>
+        <div className="switch-input-value" style={{ fontSize, fontWeight }}>
+          {inputValue}
+        </div>
       ) : (
         <input
           className="input-info-form"

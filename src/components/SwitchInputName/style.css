@@ -8,26 +8,25 @@
   border-bottom: 1px solid #333333;
 }
 
-.switch-input-value {
+.switch-input-value-name {
   width: 360px;
   height: 48px;
 }
 
-.switch-input-value:hover {
+.switch-input-value-name:hover {
   width: 360px;
   height: 48px;
   background: rgba(0, 0, 0, 0.06);
 }
 
 @media screen and (max-width: 745px) {
-  .switch-input-value {
+  .switch-input-value-name {
     width: 160px;
     height: 40px;
   }
 
-  .switch-input-value:hover {
+  .switch-input-value-name:hover {
     width: 160px;
     height: 40px;
-   
   }
 }

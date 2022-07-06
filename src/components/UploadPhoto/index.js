@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
+import girl from "../../assets/girl.jpg";
 import replace from "../../assets/replace.png";
 
 import "./style.css";
@@ -74,7 +75,7 @@ function UploadPhoto() {
             </button>
             <img
               className="header_image"
-              src="https://content.fortune.com/wp-content/uploads/2015/05/rtx1b282.jpg"
+              src={girl}
               alt="profile"
               onClick={handleOpenButtonReplace}
             />

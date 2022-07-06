@@ -3,13 +3,13 @@ import React from "react";
 import SwitchInputName from "../SwitchInputName";
 import SwitchInput from "../SwitchInput";
 import CreateChips from "../CreateChips";
+import UploadPhoto from "../UploadPhoto";
 
 import Printer from "../../assets/printer.png";
 import Flag from "../../assets/flag.png";
 
 import "react-edit-text/dist/index.css";
 import "./style.css";
-import UploadPhoto from "../UploadPhoto";
 
 export default function NavbarSlider({
   handlePrint,

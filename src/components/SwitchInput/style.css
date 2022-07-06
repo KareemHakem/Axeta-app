@@ -9,8 +9,13 @@
   margin-top: 10px;
 }
 
+.switch-input-value {
+  margin-top: 5px;
+  width: 160px;
+  height: 30px;
+}
 .switch-input-value:hover {
-  width: 360px;
-  height: 48px;
+  width: 160px;
+  height: 30px;
   background: rgba(0, 0, 0, 0.06);
 }
