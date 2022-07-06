@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./style.css";
 
-export default function SwitchInput({ fontSize, fontWeight }) {
+export default function SwitchInputCity({ fontSize, fontWeight }) {
   const [inputSwitch, setInputSwitch] = useState(false);
-  const [inputValue, setInputValue] = useState("English");
+  const [inputValue, setInputValue] = useState("Canada,Ottawa ");
 
   const handleChangeValue = (e) => {
     setInputValue(e.target.value);
@@ -20,7 +20,7 @@ export default function SwitchInput({ fontSize, fontWeight }) {
   return (
     <div onClick={handleSwitchInput}>
       {!inputSwitch ? (
-        <div className="switch-input-value" style={{ fontSize, fontWeight }}>
+        <div className="switch-input-value-city" style={{ fontSize, fontWeight }}>
           {inputValue}
         </div>
       ) : (

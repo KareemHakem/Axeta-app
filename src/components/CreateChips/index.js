@@ -19,7 +19,7 @@ export default function CreateChops({
         {userData.map((user) => (
           <div>
             <div className="chip-user-expe">
-              <h3>{user.expe}</h3>
+              <p>{user.expe}</p>
               {!openButton ? (
                 <></>
               ) : (

@@ -30,7 +30,8 @@
 }
 
 .chip-user-expe {
-  width: 47px auto;
+  min-width: 80px;
+  width: auto !important;
   height: 24px;
   background: #333333;
   border-radius: 4px;
@@ -40,6 +41,11 @@
   align-items: center;
   cursor: pointer;
   margin-right: 5px;
+}
+
+.chip-user-expe p {
+  font-weight: 200;
+  font-size: medium;
 }
 
 .input-expe-user {

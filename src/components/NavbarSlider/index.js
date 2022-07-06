@@ -2,6 +2,7 @@ import React from "react";
 
 import SwitchInputName from "../SwitchInputName";
 import SwitchInput from "../SwitchInput";
+import SwitchInputCity from "../SwitchInputCity";
 import CreateChips from "../CreateChips";
 import UploadPhoto from "../UploadPhoto";
 
@@ -32,14 +33,10 @@ export default function NavbarSlider({
         </div>
         <div className="navbar-info-user-container">
           <SwitchInputName fontSize={40} fontWeight={500} />
-          <SwitchInput fontSize={20} fontWeight={100} />
+          <SwitchInputCity />
           <div className="flex-wrap">
             <img src={Flag} alt="flag-img" />
-            <SwitchInput
-              style={{ marginLeft: -10 }}
-              fontSize={20}
-              fontWeight={100}
-            />
+            <SwitchInput style={{ marginLeft: -10 }} />
           </div>
           <CreateChips
             users={users}
