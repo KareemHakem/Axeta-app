@@ -3,7 +3,7 @@ import "./style.css";
 
 export default function SwitchInputExperience(fontSize, fontWeight) {
   const [inputSwitch, setInputSwitch] = useState(false);
-  const [inputValue, setInputValue] = useState("4 years");
+  const [inputValue, setInputValue] = useState("4");
 
   const handleChangeValue = (e) => {
     setInputValue(e.target.value);
@@ -21,13 +21,16 @@ export default function SwitchInputExperience(fontSize, fontWeight) {
       {!inputSwitch ? (
         <div className="input-value-expe">{inputValue}</div>
       ) : (
-        <input
-          className="input-expe-form"
-          onChange={handleChangeValue}
-          value={inputValue}
-          placeholder="Experience"
-          onKeyDown={handleKeyPress}
-        />
+        <div>
+          <input
+            className="input-expe-form"
+            onChange={handleChangeValue}
+            value={inputValue}
+            placeholder="Experience"
+            onKeyDown={handleKeyPress}
+            type="number"
+          />
+        </div>
       )}
     </div>
   );

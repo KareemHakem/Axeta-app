@@ -18,19 +18,21 @@ export default function CreateChops({
       <div onClick={handleOpenDeleteButton} className="chip-container">
         {userData.map((user) => (
           <div>
-            <div className="chip-user-expe">
-              <p>{user.expe}</p>
-              {!openButton ? (
-                <></>
-              ) : (
-                <button
-                  className="btn-create-chip-delete"
-                  onClick={() => handleDelate(user.id)}
-                >
-                  X
-                </button>
-              )}
-            </div>
+            {user.expe === "" ? null : (
+              <div className="chip-user-expe">
+                <p>{user.expe}</p>
+                {!openButton ? (
+                  <></>
+                ) : (
+                  <button
+                    className="btn-create-chip-delete"
+                    onClick={() => handleDelate(user.id)}
+                  >
+                    X
+                  </button>
+                )}
+              </div>
+            )}
           </div>
         ))}
       </div>

@@ -6,7 +6,11 @@ export default function SwitchInputName({ fontSize, fontWeight }) {
   const [inputValue, setInputValue] = useState("joury");
 
   const handleChangeValue = (e) => {
-    setInputValue(e.target.value);
+    if (!nameRegex.test(inputValue)) {
+      setInputValue(e.target.value);
+    } else {
+      Error("Error");
+    }
   };
   const handleSwitchInput = () => {
     setInputSwitch(true);
@@ -16,6 +20,9 @@ export default function SwitchInputName({ fontSize, fontWeight }) {
       setInputSwitch(false);
     }
   };
+
+  var nameRegex = /[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/@#]/;
+  const bool = nameRegex.test(inputValue);
 
   return (
     <div onClick={handleSwitchInput}>

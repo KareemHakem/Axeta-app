@@ -35,6 +35,7 @@ function UploadPhoto() {
           <div className="image_container">
             <button
               className="upload_btn"
+              style={{ zIndex: 1000 }}
               onClick={(event) => {
                 event.preventDefault();
                 fileInputRef.current.click();
@@ -51,7 +52,8 @@ function UploadPhoto() {
               alt="profile"
               className="header_image"
               style={{ objectFit: "cover" }}
-              onClick={handleOpenButtonReplace}
+              onMouseOver={() => setOpenButton(true)}
+              onMouseLeave={() => setOpenButton(false)}
             />
           </div>
         ) : (
@@ -77,7 +79,8 @@ function UploadPhoto() {
               className="header_image"
               src={girl}
               alt="profile"
-              onClick={handleOpenButtonReplace}
+              onMouseOver={() => setOpenButton(true)}
+              onMouseLeave={() => setOpenButton(false)}
             />
           </div>
         )}

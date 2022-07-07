@@ -4,20 +4,17 @@
   border-radius: 50%;
   outline: none;
   border: none;
-  z-index: 1000 !important;
+  z-index: inherit !important;
 }
 
 .image-replace-logo {
-  height: 20px !important;
-  width: 20px !important;
+  height: 25px !important;
+  width: 25px !important;
   border-radius: 50% !important;
-  z-index: 1000 !important;
-}
-
-.image-replace-logo {
+  background-color: #3483cc;
+  color: #fff !important;
   margin-left: 170px;
-  z-index: 1000 !important;
-  margin-bottom: 160px;
+  margin-bottom: 155px;
 }
 
 .header_image {
@@ -26,5 +23,11 @@
   border-radius: 50%;
   object-fit: cover;
   margin-right: 20px;
-  border: 4px solid #fff;
+  border: 5px solid #fff;
+  z-index: -200 !important;
+}
+
+.header_image:hover {
+  background: (0, 0, 0, 5) !important;
+  opacity: 0.8;
 }

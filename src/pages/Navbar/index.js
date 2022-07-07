@@ -13,7 +13,11 @@ export default function Navbar({ handlePrint, setUserData, userData }) {
   const [openButton, setOpenButton] = useState(false);
 
   const handleExperience = (e) => {
-    setExse(e.target.value);
+    if (setExse === "") {
+      return null;
+    } else {
+      setExse(e.target.value);
+    }
   };
 
   const handleSubmit = (e) => {
