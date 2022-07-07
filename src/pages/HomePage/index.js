@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Availabilitys from "../../components/Availability";
 import Experience from "../../components/Experience";
+import AddressMap from "../../components/IframeMap";
 import Portfolio from "../../components/Portfolio";
 import QuoteText from "../../components/QuoteText";
 import SampleCode from "../../components/SampleCode";
@@ -32,10 +33,7 @@ export default function HomePage({ handlePrint }) {
           text="There is only one good, knowledge, and one evil, ignorance."
           header="In clients I look for..."
         />
-        <QuoteText
-          text="There is only one good, knowledge, and one evil, ignorance."
-          header="In clients I look for..."
-        />
+        <AddressMap />
       </div>
     </div>
   );
