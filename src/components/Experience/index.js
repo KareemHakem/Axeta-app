@@ -10,15 +10,7 @@ export default function Experience({ userData }) {
         <>
           <div className="flex-input-Experience">
             <p className="expe-text">- {expe.expe}</p>
-            <p
-              style={{
-                display: "flex",
-                justifyContent: "space-around",
-                width: 60,
-                borderBottom: "1px dashed #3483cc",
-                color: "#3483cc",
-              }}
-            >
+            <p className="Experience-hover-text">
               <SwitchInputExperience /> years
             </p>
           </div>

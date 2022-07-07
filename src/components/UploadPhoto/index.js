@@ -23,10 +23,10 @@ function UploadPhoto() {
     }
   }, [image]);
 
-  const handleOpenButtonReplace = () => {
-    setOpenButton(!openButton);
-    console.log("kareem");
-  };
+  //   const handleOpenButtonReplace = () => {
+  //     setOpenButton(!openButton);
+  //     console.log("kareem");
+  //   };
 
   return (
     <div>
@@ -35,7 +35,6 @@ function UploadPhoto() {
           <div className="image_container">
             <button
               className="upload_btn"
-              style={{ zIndex: 1000 }}
               onClick={(event) => {
                 event.preventDefault();
                 fileInputRef.current.click();
@@ -52,8 +51,7 @@ function UploadPhoto() {
               alt="profile"
               className="header_image"
               style={{ objectFit: "cover" }}
-              onMouseOver={() => setOpenButton(true)}
-              onMouseLeave={() => setOpenButton(false)}
+              onMouseOver={() => setOpenButton(!openButton)}
             />
           </div>
         ) : (
@@ -79,8 +77,7 @@ function UploadPhoto() {
               className="header_image"
               src={girl}
               alt="profile"
-              onMouseOver={() => setOpenButton(true)}
-              onMouseLeave={() => setOpenButton(false)}
+              onMouseOver={() => setOpenButton(!openButton)}
             />
           </div>
         )}

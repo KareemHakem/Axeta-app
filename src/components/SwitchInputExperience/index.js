@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+
 import "./style.css";
 
-export default function SwitchInputExperience(fontSize, fontWeight) {
+export default function SwitchInputExperience() {
   const [inputSwitch, setInputSwitch] = useState(false);
   const [inputValue, setInputValue] = useState("4");
 
@@ -16,6 +17,7 @@ export default function SwitchInputExperience(fontSize, fontWeight) {
       setInputSwitch(false);
     }
   };
+
   return (
     <div onClick={handleSwitchInput}>
       {!inputSwitch ? (

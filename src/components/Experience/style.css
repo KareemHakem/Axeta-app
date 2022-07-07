@@ -27,12 +27,28 @@
 
 .expe-text {
   display: flex;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .flex-input-Experience {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.Experience-hover-text {
+  display: flex;
+  justify-content: space-around;
+  width: 50px;
+  border-bottom: 1px dashed #3483cc;
+  color: #3483cc;
+  margin-left: 5px;
+}
+.Experience-hover-text:hover {
+  color: #eb5757;
 }
 
 @media screen and (max-width: 1091px) {

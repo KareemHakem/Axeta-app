@@ -4,7 +4,8 @@
   border-radius: 50%;
   outline: none;
   border: none;
-  z-index: inherit !important;
+  position: relative;
+  z-index: 1;
 }
 
 .image-replace-logo {
@@ -13,8 +14,8 @@
   border-radius: 50% !important;
   background-color: #3483cc;
   color: #fff !important;
-  margin-left: 170px;
-  margin-bottom: 155px;
+  margin-left: 165px;
+  margin-bottom: 140px;
 }
 
 .header_image {
@@ -23,11 +24,10 @@
   border-radius: 50%;
   object-fit: cover;
   margin-right: 20px;
-  border: 5px solid #fff;
+  border: 4px solid #fff;
   z-index: -200 !important;
 }
 
 .header_image:hover {
-  background: (0, 0, 0, 5) !important;
   opacity: 0.8;
 }
