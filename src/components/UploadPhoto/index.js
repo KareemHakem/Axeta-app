@@ -51,7 +51,8 @@ function UploadPhoto() {
               alt="profile"
               className="header_image"
               style={{ objectFit: "cover" }}
-              onMouseOver={() => setOpenButton(!openButton)}
+              onCompositionUpdate={() => setOpenButton(!openButton)}
+              //onMouseLeave={() => setOpenButton(false)}
             />
           </div>
         ) : (
@@ -78,6 +79,7 @@ function UploadPhoto() {
               src={girl}
               alt="profile"
               onMouseOver={() => setOpenButton(!openButton)}
+              // onMouseLeave={() => setOpenButton(false)}
             />
           </div>
         )}

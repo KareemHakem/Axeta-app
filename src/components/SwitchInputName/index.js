@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 
 export default function SwitchInputName({ fontSize, fontWeight }) {
   const [inputSwitch, setInputSwitch] = useState(false);
   const [inputValue, setInputValue] = useState("joury");
+  const [errorInput, setErrorInput] = useState(false);
 
   const handleChangeValue = (e) => {
-    if (!nameRegex.test(inputValue)) {
-      setInputValue(e.target.value);
-    } else {
-      Error("Error");
-    }
+    setInputValue(e.target.value);
+    setErrorInput(!errorInput);
   };
   const handleSwitchInput = () => {
     setInputSwitch(true);
@@ -24,6 +22,8 @@ export default function SwitchInputName({ fontSize, fontWeight }) {
   var nameRegex = /[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/@#]/;
   const bool = nameRegex.test(inputValue);
 
+  console.log("bool", bool);
+
   return (
     <div onClick={handleSwitchInput}>
       {!inputSwitch ? (
@@ -34,12 +34,37 @@ export default function SwitchInputName({ fontSize, fontWeight }) {
           {inputValue}
         </div>
       ) : (
-        <input
-          className="input-info-name-form"
-          onChange={handleChangeValue}
-          value={inputValue}
-          onKeyDown={handleKeyPress}
-        />
+        <div className="display-input">
+          <input
+            className="input-info-form"
+            onChange={handleChangeValue}
+            value={inputValue}
+            onKeyDown={handleKeyPress}
+          />
+
+          {bool ? (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <p className="error-logo">X</p>
+              <p style={{ color: "red", marginLeft: 5 }}>Error</p>
+            </div>
+          ) : (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <p className="logo"> ✔ </p>
+            </div>
+          )}
+        </div>
       )}
     </div>
   );

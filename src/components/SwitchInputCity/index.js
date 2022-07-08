@@ -17,19 +17,50 @@ export default function SwitchInputCity({ fontSize, fontWeight }) {
     }
   };
 
+  var nameRegex = /[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/@#]/;
+  const bool = nameRegex.test(inputValue);
+
   return (
     <div onClick={handleSwitchInput}>
       {!inputSwitch ? (
-        <div className="switch-input-value-city" style={{ fontSize, fontWeight }}>
+        <div
+          className="switch-input-value-city"
+          style={{ fontSize, fontWeight }}
+        >
           {inputValue}
         </div>
       ) : (
-        <input
-          className="input-info-form"
-          onChange={handleChangeValue}
-          value={inputValue}
-          onKeyDown={handleKeyPress}
-        />
+        <div className="display-input">
+          <input
+            className="input-info-form"
+            onChange={handleChangeValue}
+            value={inputValue}
+            onKeyDown={handleKeyPress}
+          />
+
+          {bool ? (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <p className="error-logo">X</p>
+              <p style={{ color: "red", marginLeft: 5 }}>Error</p>
+            </div>
+          ) : (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <p className="logo"> ✔ </p>
+            </div>
+          )}
+        </div>
       )}
     </div>
   );

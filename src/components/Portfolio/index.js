@@ -6,17 +6,21 @@ export default function Portfolio() {
     <div className="Portfolio-container">
       <h3>Portfolio</h3>
       <p>
-        <p style={{ marginRight: 10 }}>-</p>Bootstrap 4 Material Design
+        <h5 style={{ marginRight: 10, color: "#000" }}>--</h5>Bootstrap 4
+        Material Design
         <br /> (Sample Link)
       </p>
       <p>
-        <p style={{ marginRight: 10 }}>-</p> Modern JavaScript stack
+        <h5 style={{ marginRight: 10, color: "#000" }}>--</h5> Modern JavaScript
+        stack
       </p>
       <p>
-        <p style={{ marginRight: 10 }}>-</p> Datepicker for twitter bootstrap
+        <h5 style={{ marginRight: 10, color: "#000" }}>--</h5> Datepicker for
+        twitter bootstrap
       </p>
       <p>
-        <p style={{ marginRight: 10 }}>-</p> Fast and reliable Bootstrap <br />
+        <h5 style={{ marginRight: 10, color: "#000" }}>--</h5> Fast and reliable
+        Bootstrap <br />
         widgets in Angular
       </p>
     </div>

@@ -1,6 +1,6 @@
 .upload_btn {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   outline: none;
   border: none;
@@ -14,7 +14,7 @@
   border-radius: 50% !important;
   background-color: #3483cc;
   color: #fff !important;
-  margin-left: 165px;
+  margin-left: 160px;
   margin-bottom: 140px;
 }
 

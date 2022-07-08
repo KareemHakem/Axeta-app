@@ -13,10 +13,40 @@
   margin-top: 5px;
   width: 160px;
   height: 25px;
-  font-size:16px ;
+  font-size: 16px;
 }
 .switch-input-value:hover {
   width: 160px;
   height: 25px;
   background: rgba(0, 0, 0, 0.06);
+}
+
+.error-logo {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: green;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.display-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
