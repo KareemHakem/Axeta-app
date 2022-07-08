@@ -20,15 +20,26 @@ export default function Navbar({ handlePrint, setUserData, userData }) {
     }
   };
 
+  console.log(userData, "data");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const value = {
       expe,
     };
 
-    setUserData([...userData, value]);
+    if (expe.length > 1) {
+      setUserData([...userData, value]);
+      console.log("yes");
+    } else {
+      console.log("no");
+      return null;
+    }
+
     setExse("");
   };
+
+  console.log(expe?.trim(), "expe");
 
   const handleDelate = (id) => {
     setUserData(userData.filter((user) => user.id !== id));

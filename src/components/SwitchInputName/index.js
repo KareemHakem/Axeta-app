@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./style.css";
 
 export default function SwitchInputName({ fontSize, fontWeight }) {
@@ -51,7 +51,9 @@ export default function SwitchInputName({ fontSize, fontWeight }) {
               }}
             >
               <p className="error-logo">X</p>
-              <p style={{ color: "red", marginLeft: 5 }}>Error</p>
+              <p style={{ color: "red", marginLeft: 5, marginTop: 10 }}>
+                Error
+              </p>
             </div>
           ) : (
             <div

@@ -8,12 +8,16 @@ export default function Experience({ userData }) {
       <h3>Experience</h3>
       {userData.map((expe) => (
         <>
-          <div className="flex-input-Experience">
-            <p className="expe-text">- {expe.expe}</p>
-            <p className="Experience-hover-text">
-              <SwitchInputExperience /> years
-            </p>
-          </div>
+          {expe === null ? (
+            <></>
+          ) : (
+            <div className="flex-input-Experience">
+              <p className="expe-text">- {expe.expe}</p>
+              <p className="Experience-hover-text">
+                <SwitchInputExperience /> years
+              </p>
+            </div>
+          )}
         </>
       ))}
     </div>

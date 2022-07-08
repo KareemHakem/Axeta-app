@@ -47,7 +47,9 @@ export default function SwitchInputCity({ fontSize, fontWeight }) {
               }}
             >
               <p className="error-logo">X</p>
-              <p style={{ color: "red", marginLeft: 5 }}>Error</p>
+              <p style={{ color: "red", marginLeft: 5, marginTop: 10 }}>
+                Error
+              </p>
             </div>
           ) : (
             <div

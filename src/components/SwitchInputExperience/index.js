@@ -5,7 +5,6 @@ import "./style.css";
 export default function SwitchInputExperience() {
   const [inputSwitch, setInputSwitch] = useState(false);
   const [inputValue, setInputValue] = useState("4");
-  
 
   const handleChangeValue = (e) => {
     setInputValue(e.target.value);
@@ -19,7 +18,6 @@ export default function SwitchInputExperience() {
     }
   };
 
-
   return (
     <div onClick={handleSwitchInput}>
       {!inputSwitch ? (
@@ -27,12 +25,12 @@ export default function SwitchInputExperience() {
       ) : (
         <div className="display-input">
           <input
-            className="input-info-name-form"
+            className="input-expe-form"
+            type="number"
             onChange={handleChangeValue}
             value={inputValue}
             onKeyDown={handleKeyPress}
           />
-          
         </div>
       )}
     </div>
